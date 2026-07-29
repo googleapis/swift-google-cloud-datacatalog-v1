@@ -26,15 +26,15 @@ extension Clients {
   protocol PolicyTagManagerSerializationStub {
     func replaceTaxonomy(
       request: ReplaceTaxonomyRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Taxonomy
+    ) async throws -> GoogleCloudDataCatalogV1.Taxonomy
 
     func importTaxonomies(
       request: ImportTaxonomiesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.ImportTaxonomiesResponse
+    ) async throws -> GoogleCloudDataCatalogV1.ImportTaxonomiesResponse
 
     func exportTaxonomies(
       request: ExportTaxonomiesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.ExportTaxonomiesResponse
+    ) async throws -> GoogleCloudDataCatalogV1.ExportTaxonomiesResponse
 
     func listOperations(
       request: GoogleLongrunning.ListOperationsRequest, options: GoogleCloudGax.RequestOptions
@@ -63,7 +63,7 @@ extension Clients {
 
     public func replaceTaxonomy(
       request: ReplaceTaxonomyRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Taxonomy {
+    ) async throws -> GoogleCloudDataCatalogV1.Taxonomy {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -80,12 +80,12 @@ extension Clients {
       req.httpBody = try JSONEncoder().encode(request)
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.Taxonomy.self, from: data)
+        GoogleCloudDataCatalogV1.Taxonomy.self, from: data)
     }
 
     public func importTaxonomies(
       request: ImportTaxonomiesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.ImportTaxonomiesResponse {
+    ) async throws -> GoogleCloudDataCatalogV1.ImportTaxonomiesResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -102,12 +102,12 @@ extension Clients {
       req.httpBody = try JSONEncoder().encode(request)
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.ImportTaxonomiesResponse.self, from: data)
+        GoogleCloudDataCatalogV1.ImportTaxonomiesResponse.self, from: data)
     }
 
     public func exportTaxonomies(
       request: ExportTaxonomiesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.ExportTaxonomiesResponse {
+    ) async throws -> GoogleCloudDataCatalogV1.ExportTaxonomiesResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -129,7 +129,7 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.ExportTaxonomiesResponse.self, from: data)
+        GoogleCloudDataCatalogV1.ExportTaxonomiesResponse.self, from: data)
     }
 
     public func listOperations(

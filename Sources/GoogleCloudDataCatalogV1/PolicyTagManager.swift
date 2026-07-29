@@ -51,7 +51,7 @@ public class PolicyTagManagerClient: Clients.PolicyTagManagerProtocol {
   /// @Snippet(path: "PolicyTagManager_CreateTaxonomy")
   public func createTaxonomy(
     request: CreateTaxonomyRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudDatacatalogV1.Taxonomy {
+  ) async throws -> GoogleCloudDataCatalogV1.Taxonomy {
     try await self.inner.createTaxonomy(request: request, options: options)
   }
 
@@ -72,7 +72,7 @@ public class PolicyTagManagerClient: Clients.PolicyTagManagerProtocol {
   /// @Snippet(path: "PolicyTagManager_UpdateTaxonomy")
   public func updateTaxonomy(
     request: UpdateTaxonomyRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudDatacatalogV1.Taxonomy {
+  ) async throws -> GoogleCloudDataCatalogV1.Taxonomy {
     try await self.inner.updateTaxonomy(request: request, options: options)
   }
 
@@ -82,7 +82,7 @@ public class PolicyTagManagerClient: Clients.PolicyTagManagerProtocol {
   /// @Snippet(path: "PolicyTagManager_ListTaxonomies")
   public func listTaxonomies(
     request: ListTaxonomiesRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudDatacatalogV1.ListTaxonomiesResponse {
+  ) async throws -> GoogleCloudDataCatalogV1.ListTaxonomiesResponse {
     try await self.inner.listTaxonomies(request: request, options: options)
   }
 
@@ -94,7 +94,7 @@ public class PolicyTagManagerClient: Clients.PolicyTagManagerProtocol {
     byItem: ListTaxonomiesRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<Taxonomy, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudDatacatalogV1.ListTaxonomiesResponse in
+      (token: Swift.String) async throws -> GoogleCloudDataCatalogV1.ListTaxonomiesResponse in
       var request = byItem
       request.pageToken = token
       return try await self.listTaxonomies(request: request, options: options)
@@ -107,7 +107,7 @@ public class PolicyTagManagerClient: Clients.PolicyTagManagerProtocol {
   /// @Snippet(path: "PolicyTagManager_GetTaxonomy")
   public func getTaxonomy(
     request: GetTaxonomyRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudDatacatalogV1.Taxonomy {
+  ) async throws -> GoogleCloudDataCatalogV1.Taxonomy {
     try await self.inner.getTaxonomy(request: request, options: options)
   }
 
@@ -116,7 +116,7 @@ public class PolicyTagManagerClient: Clients.PolicyTagManagerProtocol {
   /// @Snippet(path: "PolicyTagManager_CreatePolicyTag")
   public func createPolicyTag(
     request: CreatePolicyTagRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudDatacatalogV1.PolicyTag {
+  ) async throws -> GoogleCloudDataCatalogV1.PolicyTag {
     try await self.inner.createPolicyTag(request: request, options: options)
   }
 
@@ -140,7 +140,7 @@ public class PolicyTagManagerClient: Clients.PolicyTagManagerProtocol {
   /// @Snippet(path: "PolicyTagManager_UpdatePolicyTag")
   public func updatePolicyTag(
     request: UpdatePolicyTagRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudDatacatalogV1.PolicyTag {
+  ) async throws -> GoogleCloudDataCatalogV1.PolicyTag {
     try await self.inner.updatePolicyTag(request: request, options: options)
   }
 
@@ -149,7 +149,7 @@ public class PolicyTagManagerClient: Clients.PolicyTagManagerProtocol {
   /// @Snippet(path: "PolicyTagManager_ListPolicyTags")
   public func listPolicyTags(
     request: ListPolicyTagsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudDatacatalogV1.ListPolicyTagsResponse {
+  ) async throws -> GoogleCloudDataCatalogV1.ListPolicyTagsResponse {
     try await self.inner.listPolicyTags(request: request, options: options)
   }
 
@@ -160,7 +160,7 @@ public class PolicyTagManagerClient: Clients.PolicyTagManagerProtocol {
     byItem: ListPolicyTagsRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<PolicyTag, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudDatacatalogV1.ListPolicyTagsResponse in
+      (token: Swift.String) async throws -> GoogleCloudDataCatalogV1.ListPolicyTagsResponse in
       var request = byItem
       request.pageToken = token
       return try await self.listPolicyTags(request: request, options: options)
@@ -173,7 +173,7 @@ public class PolicyTagManagerClient: Clients.PolicyTagManagerProtocol {
   /// @Snippet(path: "PolicyTagManager_GetPolicyTag")
   public func getPolicyTag(
     request: GetPolicyTagRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudDatacatalogV1.PolicyTag {
+  ) async throws -> GoogleCloudDataCatalogV1.PolicyTag {
     try await self.inner.getPolicyTag(request: request, options: options)
   }
 
@@ -276,13 +276,13 @@ extension Clients {
   public protocol PolicyTagManagerProtocol {
     /// See `PolicyTagManagerClient.createTaxonomy`.
     func createTaxonomy(request: CreateTaxonomyRequest) async throws
-      -> GoogleCloudDatacatalogV1.Taxonomy
+      -> GoogleCloudDataCatalogV1.Taxonomy
 
     /// See `PolicyTagManagerClient.createTaxonomy`.
     func createTaxonomy(
       parent: Swift.String,
       taxonomy: Taxonomy?,
-    ) async throws -> GoogleCloudDatacatalogV1.Taxonomy
+    ) async throws -> GoogleCloudDataCatalogV1.Taxonomy
 
     /// See `PolicyTagManagerClient.deleteTaxonomy`.
     func deleteTaxonomy(request: DeleteTaxonomyRequest) async throws
@@ -294,16 +294,16 @@ extension Clients {
 
     /// See `PolicyTagManagerClient.updateTaxonomy`.
     func updateTaxonomy(request: UpdateTaxonomyRequest) async throws
-      -> GoogleCloudDatacatalogV1.Taxonomy
+      -> GoogleCloudDataCatalogV1.Taxonomy
 
     /// See `PolicyTagManagerClient.updateTaxonomy`.
     func updateTaxonomy(
       taxonomy: Taxonomy?,
-    ) async throws -> GoogleCloudDatacatalogV1.Taxonomy
+    ) async throws -> GoogleCloudDataCatalogV1.Taxonomy
 
     /// See `PolicyTagManagerClient.listTaxonomies`.
     func listTaxonomies(request: ListTaxonomiesRequest) async throws
-      -> GoogleCloudDatacatalogV1.ListTaxonomiesResponse
+      -> GoogleCloudDataCatalogV1.ListTaxonomiesResponse
 
     /// See `PolicyTagManagerClient.listTaxonomies`.
     func listTaxonomies(
@@ -316,22 +316,22 @@ extension Clients {
     ) throws -> any AsyncSequence<Taxonomy, Swift.Error>
 
     /// See `PolicyTagManagerClient.getTaxonomy`.
-    func getTaxonomy(request: GetTaxonomyRequest) async throws -> GoogleCloudDatacatalogV1.Taxonomy
+    func getTaxonomy(request: GetTaxonomyRequest) async throws -> GoogleCloudDataCatalogV1.Taxonomy
 
     /// See `PolicyTagManagerClient.getTaxonomy`.
     func getTaxonomy(
       name: Swift.String,
-    ) async throws -> GoogleCloudDatacatalogV1.Taxonomy
+    ) async throws -> GoogleCloudDataCatalogV1.Taxonomy
 
     /// See `PolicyTagManagerClient.createPolicyTag`.
     func createPolicyTag(request: CreatePolicyTagRequest) async throws
-      -> GoogleCloudDatacatalogV1.PolicyTag
+      -> GoogleCloudDataCatalogV1.PolicyTag
 
     /// See `PolicyTagManagerClient.createPolicyTag`.
     func createPolicyTag(
       parent: Swift.String,
       policyTag: PolicyTag?,
-    ) async throws -> GoogleCloudDatacatalogV1.PolicyTag
+    ) async throws -> GoogleCloudDataCatalogV1.PolicyTag
 
     /// See `PolicyTagManagerClient.deletePolicyTag`.
     func deletePolicyTag(request: DeletePolicyTagRequest) async throws
@@ -343,16 +343,16 @@ extension Clients {
 
     /// See `PolicyTagManagerClient.updatePolicyTag`.
     func updatePolicyTag(request: UpdatePolicyTagRequest) async throws
-      -> GoogleCloudDatacatalogV1.PolicyTag
+      -> GoogleCloudDataCatalogV1.PolicyTag
 
     /// See `PolicyTagManagerClient.updatePolicyTag`.
     func updatePolicyTag(
       policyTag: PolicyTag?,
-    ) async throws -> GoogleCloudDatacatalogV1.PolicyTag
+    ) async throws -> GoogleCloudDataCatalogV1.PolicyTag
 
     /// See `PolicyTagManagerClient.listPolicyTags`.
     func listPolicyTags(request: ListPolicyTagsRequest) async throws
-      -> GoogleCloudDatacatalogV1.ListPolicyTagsResponse
+      -> GoogleCloudDataCatalogV1.ListPolicyTagsResponse
 
     /// See `PolicyTagManagerClient.listPolicyTags`.
     func listPolicyTags(
@@ -366,12 +366,12 @@ extension Clients {
 
     /// See `PolicyTagManagerClient.getPolicyTag`.
     func getPolicyTag(request: GetPolicyTagRequest) async throws
-      -> GoogleCloudDatacatalogV1.PolicyTag
+      -> GoogleCloudDataCatalogV1.PolicyTag
 
     /// See `PolicyTagManagerClient.getPolicyTag`.
     func getPolicyTag(
       name: Swift.String,
-    ) async throws -> GoogleCloudDatacatalogV1.PolicyTag
+    ) async throws -> GoogleCloudDataCatalogV1.PolicyTag
 
     /// See `PolicyTagManagerClient.getIamPolicy`.
     func getIamPolicy(request: GoogleIAMV1.GetIamPolicyRequest) async throws -> GoogleIAMV1.Policy
@@ -417,7 +417,7 @@ extension Clients {
     /// See `PolicyTagManagerClient.createTaxonomy`.
     func createTaxonomy(
       request: CreateTaxonomyRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Taxonomy
+    ) async throws -> GoogleCloudDataCatalogV1.Taxonomy
 
     /// See `PolicyTagManagerClient.deleteTaxonomy`.
     func deleteTaxonomy(
@@ -427,12 +427,12 @@ extension Clients {
     /// See `PolicyTagManagerClient.updateTaxonomy`.
     func updateTaxonomy(
       request: UpdateTaxonomyRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Taxonomy
+    ) async throws -> GoogleCloudDataCatalogV1.Taxonomy
 
     /// See `PolicyTagManagerClient.listTaxonomies`.
     func listTaxonomies(
       request: ListTaxonomiesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.ListTaxonomiesResponse
+    ) async throws -> GoogleCloudDataCatalogV1.ListTaxonomiesResponse
 
     /// See `PolicyTagManagerClient.listTaxonomies`.
     func listTaxonomies(
@@ -442,12 +442,12 @@ extension Clients {
     /// See `PolicyTagManagerClient.getTaxonomy`.
     func getTaxonomy(
       request: GetTaxonomyRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Taxonomy
+    ) async throws -> GoogleCloudDataCatalogV1.Taxonomy
 
     /// See `PolicyTagManagerClient.createPolicyTag`.
     func createPolicyTag(
       request: CreatePolicyTagRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.PolicyTag
+    ) async throws -> GoogleCloudDataCatalogV1.PolicyTag
 
     /// See `PolicyTagManagerClient.deletePolicyTag`.
     func deletePolicyTag(
@@ -457,12 +457,12 @@ extension Clients {
     /// See `PolicyTagManagerClient.updatePolicyTag`.
     func updatePolicyTag(
       request: UpdatePolicyTagRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.PolicyTag
+    ) async throws -> GoogleCloudDataCatalogV1.PolicyTag
 
     /// See `PolicyTagManagerClient.listPolicyTags`.
     func listPolicyTags(
       request: ListPolicyTagsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.ListPolicyTagsResponse
+    ) async throws -> GoogleCloudDataCatalogV1.ListPolicyTagsResponse
 
     /// See `PolicyTagManagerClient.listPolicyTags`.
     func listPolicyTags(
@@ -472,7 +472,7 @@ extension Clients {
     /// See `PolicyTagManagerClient.getPolicyTag`.
     func getPolicyTag(
       request: GetPolicyTagRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.PolicyTag
+    ) async throws -> GoogleCloudDataCatalogV1.PolicyTag
 
     /// See `PolicyTagManagerClient.getIamPolicy`.
     func getIamPolicy(
@@ -514,21 +514,21 @@ extension Clients {
 // Default implementations
 extension Clients.PolicyTagManagerProtocol {
   public func createTaxonomy(request: CreateTaxonomyRequest) async throws
-    -> GoogleCloudDatacatalogV1.Taxonomy
+    -> GoogleCloudDataCatalogV1.Taxonomy
   {
     try await self.createTaxonomy(request: request, options: .init())
   }
 
   public func createTaxonomy(
     request: CreateTaxonomyRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudDatacatalogV1.Taxonomy {
+  ) async throws -> GoogleCloudDataCatalogV1.Taxonomy {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func createTaxonomy(
     parent: Swift.String,
     taxonomy: Taxonomy?,
-  ) async throws -> GoogleCloudDatacatalogV1.Taxonomy {
+  ) async throws -> GoogleCloudDataCatalogV1.Taxonomy {
     let request = CreateTaxonomyRequest().with {
       $0.parent = parent
       $0.taxonomy = taxonomy
@@ -556,20 +556,20 @@ extension Clients.PolicyTagManagerProtocol {
   }
 
   public func updateTaxonomy(request: UpdateTaxonomyRequest) async throws
-    -> GoogleCloudDatacatalogV1.Taxonomy
+    -> GoogleCloudDataCatalogV1.Taxonomy
   {
     try await self.updateTaxonomy(request: request, options: .init())
   }
 
   public func updateTaxonomy(
     request: UpdateTaxonomyRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudDatacatalogV1.Taxonomy {
+  ) async throws -> GoogleCloudDataCatalogV1.Taxonomy {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func updateTaxonomy(
     taxonomy: Taxonomy?,
-  ) async throws -> GoogleCloudDatacatalogV1.Taxonomy {
+  ) async throws -> GoogleCloudDataCatalogV1.Taxonomy {
     let request = UpdateTaxonomyRequest().with {
       $0.taxonomy = taxonomy
     }
@@ -577,14 +577,14 @@ extension Clients.PolicyTagManagerProtocol {
   }
 
   public func listTaxonomies(request: ListTaxonomiesRequest) async throws
-    -> GoogleCloudDatacatalogV1.ListTaxonomiesResponse
+    -> GoogleCloudDataCatalogV1.ListTaxonomiesResponse
   {
     try await self.listTaxonomies(request: request, options: .init())
   }
 
   public func listTaxonomies(
     request: ListTaxonomiesRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudDatacatalogV1.ListTaxonomiesResponse {
+  ) async throws -> GoogleCloudDataCatalogV1.ListTaxonomiesResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -598,7 +598,7 @@ extension Clients.PolicyTagManagerProtocol {
     byItem: ListTaxonomiesRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<Taxonomy, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudDatacatalogV1.ListTaxonomiesResponse in
+      (token: Swift.String) async throws -> GoogleCloudDataCatalogV1.ListTaxonomiesResponse in
       throw GoogleCloudGax.RequestError.unimplemented
     }
     return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
@@ -614,20 +614,20 @@ extension Clients.PolicyTagManagerProtocol {
   }
 
   public func getTaxonomy(request: GetTaxonomyRequest) async throws
-    -> GoogleCloudDatacatalogV1.Taxonomy
+    -> GoogleCloudDataCatalogV1.Taxonomy
   {
     try await self.getTaxonomy(request: request, options: .init())
   }
 
   public func getTaxonomy(
     request: GetTaxonomyRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudDatacatalogV1.Taxonomy {
+  ) async throws -> GoogleCloudDataCatalogV1.Taxonomy {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func getTaxonomy(
     name: Swift.String,
-  ) async throws -> GoogleCloudDatacatalogV1.Taxonomy {
+  ) async throws -> GoogleCloudDataCatalogV1.Taxonomy {
     let request = GetTaxonomyRequest().with {
       $0.name = name
     }
@@ -635,21 +635,21 @@ extension Clients.PolicyTagManagerProtocol {
   }
 
   public func createPolicyTag(request: CreatePolicyTagRequest) async throws
-    -> GoogleCloudDatacatalogV1.PolicyTag
+    -> GoogleCloudDataCatalogV1.PolicyTag
   {
     try await self.createPolicyTag(request: request, options: .init())
   }
 
   public func createPolicyTag(
     request: CreatePolicyTagRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudDatacatalogV1.PolicyTag {
+  ) async throws -> GoogleCloudDataCatalogV1.PolicyTag {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func createPolicyTag(
     parent: Swift.String,
     policyTag: PolicyTag?,
-  ) async throws -> GoogleCloudDatacatalogV1.PolicyTag {
+  ) async throws -> GoogleCloudDataCatalogV1.PolicyTag {
     let request = CreatePolicyTagRequest().with {
       $0.parent = parent
       $0.policyTag = policyTag
@@ -677,20 +677,20 @@ extension Clients.PolicyTagManagerProtocol {
   }
 
   public func updatePolicyTag(request: UpdatePolicyTagRequest) async throws
-    -> GoogleCloudDatacatalogV1.PolicyTag
+    -> GoogleCloudDataCatalogV1.PolicyTag
   {
     try await self.updatePolicyTag(request: request, options: .init())
   }
 
   public func updatePolicyTag(
     request: UpdatePolicyTagRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudDatacatalogV1.PolicyTag {
+  ) async throws -> GoogleCloudDataCatalogV1.PolicyTag {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func updatePolicyTag(
     policyTag: PolicyTag?,
-  ) async throws -> GoogleCloudDatacatalogV1.PolicyTag {
+  ) async throws -> GoogleCloudDataCatalogV1.PolicyTag {
     let request = UpdatePolicyTagRequest().with {
       $0.policyTag = policyTag
     }
@@ -698,14 +698,14 @@ extension Clients.PolicyTagManagerProtocol {
   }
 
   public func listPolicyTags(request: ListPolicyTagsRequest) async throws
-    -> GoogleCloudDatacatalogV1.ListPolicyTagsResponse
+    -> GoogleCloudDataCatalogV1.ListPolicyTagsResponse
   {
     try await self.listPolicyTags(request: request, options: .init())
   }
 
   public func listPolicyTags(
     request: ListPolicyTagsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudDatacatalogV1.ListPolicyTagsResponse {
+  ) async throws -> GoogleCloudDataCatalogV1.ListPolicyTagsResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -719,7 +719,7 @@ extension Clients.PolicyTagManagerProtocol {
     byItem: ListPolicyTagsRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<PolicyTag, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudDatacatalogV1.ListPolicyTagsResponse in
+      (token: Swift.String) async throws -> GoogleCloudDataCatalogV1.ListPolicyTagsResponse in
       throw GoogleCloudGax.RequestError.unimplemented
     }
     return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
@@ -735,20 +735,20 @@ extension Clients.PolicyTagManagerProtocol {
   }
 
   public func getPolicyTag(request: GetPolicyTagRequest) async throws
-    -> GoogleCloudDatacatalogV1.PolicyTag
+    -> GoogleCloudDataCatalogV1.PolicyTag
   {
     try await self.getPolicyTag(request: request, options: .init())
   }
 
   public func getPolicyTag(
     request: GetPolicyTagRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudDatacatalogV1.PolicyTag {
+  ) async throws -> GoogleCloudDataCatalogV1.PolicyTag {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func getPolicyTag(
     name: Swift.String,
-  ) async throws -> GoogleCloudDatacatalogV1.PolicyTag {
+  ) async throws -> GoogleCloudDataCatalogV1.PolicyTag {
     let request = GetPolicyTagRequest().with {
       $0.name = name
     }

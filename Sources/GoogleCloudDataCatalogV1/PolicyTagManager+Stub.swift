@@ -27,7 +27,7 @@ extension Clients {
   protocol PolicyTagManagerStub {
     func createTaxonomy(
       request: CreateTaxonomyRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Taxonomy
+    ) async throws -> GoogleCloudDataCatalogV1.Taxonomy
 
     func deleteTaxonomy(
       request: DeleteTaxonomyRequest, options: GoogleCloudGax.RequestOptions
@@ -35,19 +35,19 @@ extension Clients {
 
     func updateTaxonomy(
       request: UpdateTaxonomyRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Taxonomy
+    ) async throws -> GoogleCloudDataCatalogV1.Taxonomy
 
     func listTaxonomies(
       request: ListTaxonomiesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.ListTaxonomiesResponse
+    ) async throws -> GoogleCloudDataCatalogV1.ListTaxonomiesResponse
 
     func getTaxonomy(
       request: GetTaxonomyRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Taxonomy
+    ) async throws -> GoogleCloudDataCatalogV1.Taxonomy
 
     func createPolicyTag(
       request: CreatePolicyTagRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.PolicyTag
+    ) async throws -> GoogleCloudDataCatalogV1.PolicyTag
 
     func deletePolicyTag(
       request: DeletePolicyTagRequest, options: GoogleCloudGax.RequestOptions
@@ -55,15 +55,15 @@ extension Clients {
 
     func updatePolicyTag(
       request: UpdatePolicyTagRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.PolicyTag
+    ) async throws -> GoogleCloudDataCatalogV1.PolicyTag
 
     func listPolicyTags(
       request: ListPolicyTagsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.ListPolicyTagsResponse
+    ) async throws -> GoogleCloudDataCatalogV1.ListPolicyTagsResponse
 
     func getPolicyTag(
       request: GetPolicyTagRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.PolicyTag
+    ) async throws -> GoogleCloudDataCatalogV1.PolicyTag
 
     func getIamPolicy(
       request: GoogleIAMV1.GetIamPolicyRequest, options: GoogleCloudGax.RequestOptions
@@ -104,7 +104,7 @@ extension Clients {
 
     public func createTaxonomy(
       request: CreateTaxonomyRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Taxonomy {
+    ) async throws -> GoogleCloudDataCatalogV1.Taxonomy {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -123,7 +123,7 @@ extension Clients {
       }
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.Taxonomy.self, from: data)
+        GoogleCloudDataCatalogV1.Taxonomy.self, from: data)
     }
 
     public func deleteTaxonomy(
@@ -146,7 +146,7 @@ extension Clients {
 
     public func updateTaxonomy(
       request: UpdateTaxonomyRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Taxonomy {
+    ) async throws -> GoogleCloudDataCatalogV1.Taxonomy {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.taxonomy.map({ $0.name }), !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding(
@@ -168,12 +168,12 @@ extension Clients {
       }
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.Taxonomy.self, from: data)
+        GoogleCloudDataCatalogV1.Taxonomy.self, from: data)
     }
 
     public func listTaxonomies(
       request: ListTaxonomiesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.ListTaxonomiesResponse {
+    ) async throws -> GoogleCloudDataCatalogV1.ListTaxonomiesResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -192,12 +192,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.ListTaxonomiesResponse.self, from: data)
+        GoogleCloudDataCatalogV1.ListTaxonomiesResponse.self, from: data)
     }
 
     public func getTaxonomy(
       request: GetTaxonomyRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Taxonomy {
+    ) async throws -> GoogleCloudDataCatalogV1.Taxonomy {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -212,12 +212,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.Taxonomy.self, from: data)
+        GoogleCloudDataCatalogV1.Taxonomy.self, from: data)
     }
 
     public func createPolicyTag(
       request: CreatePolicyTagRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.PolicyTag {
+    ) async throws -> GoogleCloudDataCatalogV1.PolicyTag {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -236,7 +236,7 @@ extension Clients {
       }
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.PolicyTag.self, from: data)
+        GoogleCloudDataCatalogV1.PolicyTag.self, from: data)
     }
 
     public func deletePolicyTag(
@@ -259,7 +259,7 @@ extension Clients {
 
     public func updatePolicyTag(
       request: UpdatePolicyTagRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.PolicyTag {
+    ) async throws -> GoogleCloudDataCatalogV1.PolicyTag {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.policyTag.map({ $0.name }), !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding(
@@ -281,12 +281,12 @@ extension Clients {
       }
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.PolicyTag.self, from: data)
+        GoogleCloudDataCatalogV1.PolicyTag.self, from: data)
     }
 
     public func listPolicyTags(
       request: ListPolicyTagsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.ListPolicyTagsResponse {
+    ) async throws -> GoogleCloudDataCatalogV1.ListPolicyTagsResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -304,12 +304,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.ListPolicyTagsResponse.self, from: data)
+        GoogleCloudDataCatalogV1.ListPolicyTagsResponse.self, from: data)
     }
 
     public func getPolicyTag(
       request: GetPolicyTagRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.PolicyTag {
+    ) async throws -> GoogleCloudDataCatalogV1.PolicyTag {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -324,7 +324,7 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.PolicyTag.self, from: data)
+        GoogleCloudDataCatalogV1.PolicyTag.self, from: data)
     }
 
     public func getIamPolicy(

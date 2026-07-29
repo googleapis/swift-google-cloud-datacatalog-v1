@@ -22,44 +22,52 @@ import GoogleCloudWkt
 import GoogleIAMV1
 import GoogleLongrunning
 import GoogleCloudGax
+import struct Logging.Logger
 
 extension Clients {
-  final class PolicyTagManagerRetry: PolicyTagManagerStub {
+  final class PolicyTagManagerLogging: PolicyTagManagerStub {
     let inner: any PolicyTagManagerStub
-    let options: GoogleCloudGax.ClientOptions
+    let logger: Logger
 
-    public init(_ inner: any PolicyTagManagerStub, options: GoogleCloudGax.ClientOptions) {
+    public init(_ inner: any PolicyTagManagerStub, logger: Logger) {
+      var logger = logger
+      logger[metadataKey: "gcp.artifact.id"] = "google-cloud-datacatalog-v1"
+      logger[metadataKey: "gcp.client.service"] = "datacatalog"
+      logger[metadataKey: "gcp.experimental.swift.client"] = "PolicyTagManager"
       self.inner = inner
-      self.options = options
+      self.logger = logger
     }
 
     func _intercept<Input, Output>(
       request: Input,
       options: GoogleCloudGax.RequestOptions,
-      idempotent: Swift.Bool,
+      name: Swift.String,
       action: (Input, GoogleCloudGax.RequestOptions) async throws -> Output,
     ) async throws -> Output {
-      let loop = GoogleCloudGax._RetryLoop(
-        options: options, withDefault: self.options, idempotent: idempotent,
-      )
-      let attempt = { (attemptTimeout: Swift.Duration?) async throws -> Output in
-        var attemptOptions = options
-        attemptOptions.attemptTimeout = attemptTimeout
-        return try await action(request, attemptOptions)
+      var logger = logger
+      logger[metadataKey: "gcp.experimental.swift.request.id"] = "\(UUID())"
+      logger[metadataKey: "gcp.experimental.swift.method"] = .string(name)
+      logger.debug("enter  : \(request) \(options)")
+      do {
+        let output = try await action(request, options)
+        logger.debug("success: \(request) \(options) \(output)")
+        return output
+      } catch let error {
+        logger.debug("error  : \(request) \(options) \(error)")
+        throw error
       }
-      return try await loop.run(attempt: attempt)
     }
 
     public func createTaxonomy(
       request: CreateTaxonomyRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Taxonomy {
+    ) async throws -> GoogleCloudDataCatalogV1.Taxonomy {
       try await self._intercept(
         request: request,
         options: options,
-        idempotent: false,
+        name: "createTaxonomy",
         action: {
           (r: CreateTaxonomyRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudDatacatalogV1.Taxonomy
+            -> GoogleCloudDataCatalogV1.Taxonomy
           in
           return try await self.inner.createTaxonomy(request: r, options: o)
         })
@@ -71,7 +79,7 @@ extension Clients {
       try await self._intercept(
         request: request,
         options: options,
-        idempotent: false,
+        name: "deleteTaxonomy",
         action: {
           (r: DeleteTaxonomyRequest, o: GoogleCloudGax.RequestOptions) async throws -> Void in
           return try await self.inner.deleteTaxonomy(request: r, options: o)
@@ -80,14 +88,14 @@ extension Clients {
 
     public func updateTaxonomy(
       request: UpdateTaxonomyRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Taxonomy {
+    ) async throws -> GoogleCloudDataCatalogV1.Taxonomy {
       try await self._intercept(
         request: request,
         options: options,
-        idempotent: false,
+        name: "updateTaxonomy",
         action: {
           (r: UpdateTaxonomyRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudDatacatalogV1.Taxonomy
+            -> GoogleCloudDataCatalogV1.Taxonomy
           in
           return try await self.inner.updateTaxonomy(request: r, options: o)
         })
@@ -95,14 +103,14 @@ extension Clients {
 
     public func listTaxonomies(
       request: ListTaxonomiesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.ListTaxonomiesResponse {
+    ) async throws -> GoogleCloudDataCatalogV1.ListTaxonomiesResponse {
       try await self._intercept(
         request: request,
         options: options,
-        idempotent: true,
+        name: "listTaxonomies",
         action: {
           (r: ListTaxonomiesRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudDatacatalogV1.ListTaxonomiesResponse
+            -> GoogleCloudDataCatalogV1.ListTaxonomiesResponse
           in
           return try await self.inner.listTaxonomies(request: r, options: o)
         })
@@ -110,14 +118,14 @@ extension Clients {
 
     public func getTaxonomy(
       request: GetTaxonomyRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Taxonomy {
+    ) async throws -> GoogleCloudDataCatalogV1.Taxonomy {
       try await self._intercept(
         request: request,
         options: options,
-        idempotent: true,
+        name: "getTaxonomy",
         action: {
           (r: GetTaxonomyRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudDatacatalogV1.Taxonomy
+            -> GoogleCloudDataCatalogV1.Taxonomy
           in
           return try await self.inner.getTaxonomy(request: r, options: o)
         })
@@ -125,14 +133,14 @@ extension Clients {
 
     public func createPolicyTag(
       request: CreatePolicyTagRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.PolicyTag {
+    ) async throws -> GoogleCloudDataCatalogV1.PolicyTag {
       try await self._intercept(
         request: request,
         options: options,
-        idempotent: false,
+        name: "createPolicyTag",
         action: {
           (r: CreatePolicyTagRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudDatacatalogV1.PolicyTag
+            -> GoogleCloudDataCatalogV1.PolicyTag
           in
           return try await self.inner.createPolicyTag(request: r, options: o)
         })
@@ -144,7 +152,7 @@ extension Clients {
       try await self._intercept(
         request: request,
         options: options,
-        idempotent: false,
+        name: "deletePolicyTag",
         action: {
           (r: DeletePolicyTagRequest, o: GoogleCloudGax.RequestOptions) async throws -> Void in
           return try await self.inner.deletePolicyTag(request: r, options: o)
@@ -153,14 +161,14 @@ extension Clients {
 
     public func updatePolicyTag(
       request: UpdatePolicyTagRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.PolicyTag {
+    ) async throws -> GoogleCloudDataCatalogV1.PolicyTag {
       try await self._intercept(
         request: request,
         options: options,
-        idempotent: false,
+        name: "updatePolicyTag",
         action: {
           (r: UpdatePolicyTagRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudDatacatalogV1.PolicyTag
+            -> GoogleCloudDataCatalogV1.PolicyTag
           in
           return try await self.inner.updatePolicyTag(request: r, options: o)
         })
@@ -168,14 +176,14 @@ extension Clients {
 
     public func listPolicyTags(
       request: ListPolicyTagsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.ListPolicyTagsResponse {
+    ) async throws -> GoogleCloudDataCatalogV1.ListPolicyTagsResponse {
       try await self._intercept(
         request: request,
         options: options,
-        idempotent: true,
+        name: "listPolicyTags",
         action: {
           (r: ListPolicyTagsRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudDatacatalogV1.ListPolicyTagsResponse
+            -> GoogleCloudDataCatalogV1.ListPolicyTagsResponse
           in
           return try await self.inner.listPolicyTags(request: r, options: o)
         })
@@ -183,14 +191,14 @@ extension Clients {
 
     public func getPolicyTag(
       request: GetPolicyTagRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.PolicyTag {
+    ) async throws -> GoogleCloudDataCatalogV1.PolicyTag {
       try await self._intercept(
         request: request,
         options: options,
-        idempotent: true,
+        name: "getPolicyTag",
         action: {
           (r: GetPolicyTagRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudDatacatalogV1.PolicyTag
+            -> GoogleCloudDataCatalogV1.PolicyTag
           in
           return try await self.inner.getPolicyTag(request: r, options: o)
         })
@@ -202,7 +210,7 @@ extension Clients {
       try await self._intercept(
         request: request,
         options: options,
-        idempotent: false,
+        name: "getIamPolicy",
         action: {
           (r: GoogleIAMV1.GetIamPolicyRequest, o: GoogleCloudGax.RequestOptions) async throws
             -> GoogleIAMV1.Policy
@@ -217,7 +225,7 @@ extension Clients {
       try await self._intercept(
         request: request,
         options: options,
-        idempotent: false,
+        name: "setIamPolicy",
         action: {
           (r: GoogleIAMV1.SetIamPolicyRequest, o: GoogleCloudGax.RequestOptions) async throws
             -> GoogleIAMV1.Policy
@@ -232,7 +240,7 @@ extension Clients {
       try await self._intercept(
         request: request,
         options: options,
-        idempotent: false,
+        name: "testIamPermissions",
         action: {
           (r: GoogleIAMV1.TestIamPermissionsRequest, o: GoogleCloudGax.RequestOptions) async throws
             -> GoogleIAMV1.TestIamPermissionsResponse
@@ -247,7 +255,7 @@ extension Clients {
       try await self._intercept(
         request: request,
         options: options,
-        idempotent: true,
+        name: "listOperations",
         action: {
           (r: GoogleLongrunning.ListOperationsRequest, o: GoogleCloudGax.RequestOptions)
             async throws -> GoogleLongrunning.ListOperationsResponse
@@ -262,7 +270,7 @@ extension Clients {
       try await self._intercept(
         request: request,
         options: options,
-        idempotent: true,
+        name: "getOperation",
         action: {
           (r: GoogleLongrunning.GetOperationRequest, o: GoogleCloudGax.RequestOptions) async throws
             -> GoogleLongrunning.Operation
@@ -277,7 +285,7 @@ extension Clients {
       try await self._intercept(
         request: request,
         options: options,
-        idempotent: false,
+        name: "deleteOperation",
         action: {
           (r: GoogleLongrunning.DeleteOperationRequest, o: GoogleCloudGax.RequestOptions)
             async throws -> Void in
@@ -291,7 +299,7 @@ extension Clients {
       try await self._intercept(
         request: request,
         options: options,
-        idempotent: false,
+        name: "cancelOperation",
         action: {
           (r: GoogleLongrunning.CancelOperationRequest, o: GoogleCloudGax.RequestOptions)
             async throws -> Void in

@@ -59,7 +59,7 @@ public class PolicyTagManagerSerializationClient: Clients.PolicyTagManagerSerial
   /// @Snippet(path: "PolicyTagManagerSerialization_ReplaceTaxonomy")
   public func replaceTaxonomy(
     request: ReplaceTaxonomyRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudDatacatalogV1.Taxonomy {
+  ) async throws -> GoogleCloudDataCatalogV1.Taxonomy {
     try await self.inner.replaceTaxonomy(request: request, options: options)
   }
 
@@ -75,7 +75,7 @@ public class PolicyTagManagerSerializationClient: Clients.PolicyTagManagerSerial
   /// @Snippet(path: "PolicyTagManagerSerialization_ImportTaxonomies")
   public func importTaxonomies(
     request: ImportTaxonomiesRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudDatacatalogV1.ImportTaxonomiesResponse {
+  ) async throws -> GoogleCloudDataCatalogV1.ImportTaxonomiesResponse {
     try await self.inner.importTaxonomies(request: request, options: options)
   }
 
@@ -89,7 +89,7 @@ public class PolicyTagManagerSerializationClient: Clients.PolicyTagManagerSerial
   /// @Snippet(path: "PolicyTagManagerSerialization_ExportTaxonomies")
   public func exportTaxonomies(
     request: ExportTaxonomiesRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudDatacatalogV1.ExportTaxonomiesResponse {
+  ) async throws -> GoogleCloudDataCatalogV1.ExportTaxonomiesResponse {
     try await self.inner.exportTaxonomies(request: request, options: options)
   }
 
@@ -164,15 +164,15 @@ extension Clients {
   public protocol PolicyTagManagerSerializationProtocol {
     /// See `PolicyTagManagerSerializationClient.replaceTaxonomy`.
     func replaceTaxonomy(request: ReplaceTaxonomyRequest) async throws
-      -> GoogleCloudDatacatalogV1.Taxonomy
+      -> GoogleCloudDataCatalogV1.Taxonomy
 
     /// See `PolicyTagManagerSerializationClient.importTaxonomies`.
     func importTaxonomies(request: ImportTaxonomiesRequest) async throws
-      -> GoogleCloudDatacatalogV1.ImportTaxonomiesResponse
+      -> GoogleCloudDataCatalogV1.ImportTaxonomiesResponse
 
     /// See `PolicyTagManagerSerializationClient.exportTaxonomies`.
     func exportTaxonomies(request: ExportTaxonomiesRequest) async throws
-      -> GoogleCloudDatacatalogV1.ExportTaxonomiesResponse
+      -> GoogleCloudDataCatalogV1.ExportTaxonomiesResponse
 
     /// See `PolicyTagManagerSerializationClient.listOperations`.
     func listOperations(request: GoogleLongrunning.ListOperationsRequest) async throws
@@ -208,17 +208,17 @@ extension Clients {
     /// See `PolicyTagManagerSerializationClient.replaceTaxonomy`.
     func replaceTaxonomy(
       request: ReplaceTaxonomyRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Taxonomy
+    ) async throws -> GoogleCloudDataCatalogV1.Taxonomy
 
     /// See `PolicyTagManagerSerializationClient.importTaxonomies`.
     func importTaxonomies(
       request: ImportTaxonomiesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.ImportTaxonomiesResponse
+    ) async throws -> GoogleCloudDataCatalogV1.ImportTaxonomiesResponse
 
     /// See `PolicyTagManagerSerializationClient.exportTaxonomies`.
     func exportTaxonomies(
       request: ExportTaxonomiesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.ExportTaxonomiesResponse
+    ) async throws -> GoogleCloudDataCatalogV1.ExportTaxonomiesResponse
 
     /// See `PolicyTagManagerSerializationClient.listOperations`.
     func listOperations(
@@ -245,38 +245,38 @@ extension Clients {
 // Default implementations
 extension Clients.PolicyTagManagerSerializationProtocol {
   public func replaceTaxonomy(request: ReplaceTaxonomyRequest) async throws
-    -> GoogleCloudDatacatalogV1.Taxonomy
+    -> GoogleCloudDataCatalogV1.Taxonomy
   {
     try await self.replaceTaxonomy(request: request, options: .init())
   }
 
   public func replaceTaxonomy(
     request: ReplaceTaxonomyRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudDatacatalogV1.Taxonomy {
+  ) async throws -> GoogleCloudDataCatalogV1.Taxonomy {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func importTaxonomies(request: ImportTaxonomiesRequest) async throws
-    -> GoogleCloudDatacatalogV1.ImportTaxonomiesResponse
+    -> GoogleCloudDataCatalogV1.ImportTaxonomiesResponse
   {
     try await self.importTaxonomies(request: request, options: .init())
   }
 
   public func importTaxonomies(
     request: ImportTaxonomiesRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudDatacatalogV1.ImportTaxonomiesResponse {
+  ) async throws -> GoogleCloudDataCatalogV1.ImportTaxonomiesResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func exportTaxonomies(request: ExportTaxonomiesRequest) async throws
-    -> GoogleCloudDatacatalogV1.ExportTaxonomiesResponse
+    -> GoogleCloudDataCatalogV1.ExportTaxonomiesResponse
   {
     try await self.exportTaxonomies(request: request, options: .init())
   }
 
   public func exportTaxonomies(
     request: ExportTaxonomiesRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudDatacatalogV1.ExportTaxonomiesResponse {
+  ) async throws -> GoogleCloudDataCatalogV1.ExportTaxonomiesResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 

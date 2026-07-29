@@ -28,19 +28,19 @@ extension Clients {
   protocol DataCatalogStub {
     func searchCatalog(
       request: SearchCatalogRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.SearchCatalogResponse
+    ) async throws -> GoogleCloudDataCatalogV1.SearchCatalogResponse
 
     func createEntryGroup(
       request: CreateEntryGroupRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.EntryGroup
+    ) async throws -> GoogleCloudDataCatalogV1.EntryGroup
 
     func getEntryGroup(
       request: GetEntryGroupRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.EntryGroup
+    ) async throws -> GoogleCloudDataCatalogV1.EntryGroup
 
     func updateEntryGroup(
       request: UpdateEntryGroupRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.EntryGroup
+    ) async throws -> GoogleCloudDataCatalogV1.EntryGroup
 
     func deleteEntryGroup(
       request: DeleteEntryGroupRequest, options: GoogleCloudGax.RequestOptions
@@ -48,15 +48,15 @@ extension Clients {
 
     func listEntryGroups(
       request: ListEntryGroupsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.ListEntryGroupsResponse
+    ) async throws -> GoogleCloudDataCatalogV1.ListEntryGroupsResponse
 
     func createEntry(
       request: CreateEntryRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Entry
+    ) async throws -> GoogleCloudDataCatalogV1.Entry
 
     func updateEntry(
       request: UpdateEntryRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Entry
+    ) async throws -> GoogleCloudDataCatalogV1.Entry
 
     func deleteEntry(
       request: DeleteEntryRequest, options: GoogleCloudGax.RequestOptions
@@ -64,35 +64,35 @@ extension Clients {
 
     func getEntry(
       request: GetEntryRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Entry
+    ) async throws -> GoogleCloudDataCatalogV1.Entry
 
     func lookupEntry(
       request: LookupEntryRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Entry
+    ) async throws -> GoogleCloudDataCatalogV1.Entry
 
     func listEntries(
       request: ListEntriesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.ListEntriesResponse
+    ) async throws -> GoogleCloudDataCatalogV1.ListEntriesResponse
 
     func modifyEntryOverview(
       request: ModifyEntryOverviewRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.EntryOverview
+    ) async throws -> GoogleCloudDataCatalogV1.EntryOverview
 
     func modifyEntryContacts(
       request: ModifyEntryContactsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Contacts
+    ) async throws -> GoogleCloudDataCatalogV1.Contacts
 
     func createTagTemplate(
       request: CreateTagTemplateRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.TagTemplate
+    ) async throws -> GoogleCloudDataCatalogV1.TagTemplate
 
     func getTagTemplate(
       request: GetTagTemplateRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.TagTemplate
+    ) async throws -> GoogleCloudDataCatalogV1.TagTemplate
 
     func updateTagTemplate(
       request: UpdateTagTemplateRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.TagTemplate
+    ) async throws -> GoogleCloudDataCatalogV1.TagTemplate
 
     func deleteTagTemplate(
       request: DeleteTagTemplateRequest, options: GoogleCloudGax.RequestOptions
@@ -100,19 +100,19 @@ extension Clients {
 
     func createTagTemplateField(
       request: CreateTagTemplateFieldRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.TagTemplateField
+    ) async throws -> GoogleCloudDataCatalogV1.TagTemplateField
 
     func updateTagTemplateField(
       request: UpdateTagTemplateFieldRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.TagTemplateField
+    ) async throws -> GoogleCloudDataCatalogV1.TagTemplateField
 
     func renameTagTemplateField(
       request: RenameTagTemplateFieldRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.TagTemplateField
+    ) async throws -> GoogleCloudDataCatalogV1.TagTemplateField
 
     func renameTagTemplateFieldEnumValue(
       request: RenameTagTemplateFieldEnumValueRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.TagTemplateField
+    ) async throws -> GoogleCloudDataCatalogV1.TagTemplateField
 
     func deleteTagTemplateField(
       request: DeleteTagTemplateFieldRequest, options: GoogleCloudGax.RequestOptions
@@ -120,11 +120,11 @@ extension Clients {
 
     func createTag(
       request: CreateTagRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Tag
+    ) async throws -> GoogleCloudDataCatalogV1.Tag
 
     func updateTag(
       request: UpdateTagRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Tag
+    ) async throws -> GoogleCloudDataCatalogV1.Tag
 
     func deleteTag(
       request: DeleteTagRequest, options: GoogleCloudGax.RequestOptions
@@ -132,7 +132,7 @@ extension Clients {
 
     func listTags(
       request: ListTagsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.ListTagsResponse
+    ) async throws -> GoogleCloudDataCatalogV1.ListTagsResponse
 
     func reconcileTags(
       request: ReconcileTagsRequest, options: GoogleCloudGax.RequestOptions
@@ -140,11 +140,11 @@ extension Clients {
 
     func starEntry(
       request: StarEntryRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.StarEntryResponse
+    ) async throws -> GoogleCloudDataCatalogV1.StarEntryResponse
 
     func unstarEntry(
       request: UnstarEntryRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.UnstarEntryResponse
+    ) async throws -> GoogleCloudDataCatalogV1.UnstarEntryResponse
 
     func setIamPolicy(
       request: GoogleIAMV1.SetIamPolicyRequest, options: GoogleCloudGax.RequestOptions
@@ -164,15 +164,15 @@ extension Clients {
 
     func setConfig(
       request: SetConfigRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.MigrationConfig
+    ) async throws -> GoogleCloudDataCatalogV1.MigrationConfig
 
     func retrieveConfig(
       request: RetrieveConfigRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.OrganizationConfig
+    ) async throws -> GoogleCloudDataCatalogV1.OrganizationConfig
 
     func retrieveEffectiveConfig(
       request: RetrieveEffectiveConfigRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.MigrationConfig
+    ) async throws -> GoogleCloudDataCatalogV1.MigrationConfig
 
     func listOperations(
       request: GoogleLongrunning.ListOperationsRequest, options: GoogleCloudGax.RequestOptions
@@ -201,7 +201,7 @@ extension Clients {
 
     public func searchCatalog(
       request: SearchCatalogRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.SearchCatalogResponse {
+    ) async throws -> GoogleCloudDataCatalogV1.SearchCatalogResponse {
       let path = try { () throws -> Swift.String in
         return "/v1/catalog:search"
       }()
@@ -215,12 +215,12 @@ extension Clients {
       req.httpBody = try JSONEncoder().encode(request)
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.SearchCatalogResponse.self, from: data)
+        GoogleCloudDataCatalogV1.SearchCatalogResponse.self, from: data)
     }
 
     public func createEntryGroup(
       request: CreateEntryGroupRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.EntryGroup {
+    ) async throws -> GoogleCloudDataCatalogV1.EntryGroup {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -241,12 +241,12 @@ extension Clients {
       }
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.EntryGroup.self, from: data)
+        GoogleCloudDataCatalogV1.EntryGroup.self, from: data)
     }
 
     public func getEntryGroup(
       request: GetEntryGroupRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.EntryGroup {
+    ) async throws -> GoogleCloudDataCatalogV1.EntryGroup {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -263,12 +263,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.EntryGroup.self, from: data)
+        GoogleCloudDataCatalogV1.EntryGroup.self, from: data)
     }
 
     public func updateEntryGroup(
       request: UpdateEntryGroupRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.EntryGroup {
+    ) async throws -> GoogleCloudDataCatalogV1.EntryGroup {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.entryGroup.map({ $0.name }), !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding(
@@ -290,7 +290,7 @@ extension Clients {
       }
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.EntryGroup.self, from: data)
+        GoogleCloudDataCatalogV1.EntryGroup.self, from: data)
     }
 
     public func deleteEntryGroup(
@@ -315,7 +315,7 @@ extension Clients {
 
     public func listEntryGroups(
       request: ListEntryGroupsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.ListEntryGroupsResponse {
+    ) async throws -> GoogleCloudDataCatalogV1.ListEntryGroupsResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -333,12 +333,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.ListEntryGroupsResponse.self, from: data)
+        GoogleCloudDataCatalogV1.ListEntryGroupsResponse.self, from: data)
     }
 
     public func createEntry(
       request: CreateEntryRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Entry {
+    ) async throws -> GoogleCloudDataCatalogV1.Entry {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -359,12 +359,12 @@ extension Clients {
       }
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.Entry.self, from: data)
+        GoogleCloudDataCatalogV1.Entry.self, from: data)
     }
 
     public func updateEntry(
       request: UpdateEntryRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Entry {
+    ) async throws -> GoogleCloudDataCatalogV1.Entry {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.entry.map({ $0.name }), !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.entry.name' is not set or is empty")
@@ -385,7 +385,7 @@ extension Clients {
       }
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.Entry.self, from: data)
+        GoogleCloudDataCatalogV1.Entry.self, from: data)
     }
 
     public func deleteEntry(
@@ -408,7 +408,7 @@ extension Clients {
 
     public func getEntry(
       request: GetEntryRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Entry {
+    ) async throws -> GoogleCloudDataCatalogV1.Entry {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -423,12 +423,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.Entry.self, from: data)
+        GoogleCloudDataCatalogV1.Entry.self, from: data)
     }
 
     public func lookupEntry(
       request: LookupEntryRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Entry {
+    ) async throws -> GoogleCloudDataCatalogV1.Entry {
       let path = try { () throws -> Swift.String in
         return "/v1/entries:lookup"
       }()
@@ -458,12 +458,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.Entry.self, from: data)
+        GoogleCloudDataCatalogV1.Entry.self, from: data)
     }
 
     public func listEntries(
       request: ListEntriesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.ListEntriesResponse {
+    ) async throws -> GoogleCloudDataCatalogV1.ListEntriesResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -482,12 +482,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.ListEntriesResponse.self, from: data)
+        GoogleCloudDataCatalogV1.ListEntriesResponse.self, from: data)
     }
 
     public func modifyEntryOverview(
       request: ModifyEntryOverviewRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.EntryOverview {
+    ) async throws -> GoogleCloudDataCatalogV1.EntryOverview {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -504,12 +504,12 @@ extension Clients {
       req.httpBody = try JSONEncoder().encode(request)
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.EntryOverview.self, from: data)
+        GoogleCloudDataCatalogV1.EntryOverview.self, from: data)
     }
 
     public func modifyEntryContacts(
       request: ModifyEntryContactsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Contacts {
+    ) async throws -> GoogleCloudDataCatalogV1.Contacts {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -526,12 +526,12 @@ extension Clients {
       req.httpBody = try JSONEncoder().encode(request)
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.Contacts.self, from: data)
+        GoogleCloudDataCatalogV1.Contacts.self, from: data)
     }
 
     public func createTagTemplate(
       request: CreateTagTemplateRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.TagTemplate {
+    ) async throws -> GoogleCloudDataCatalogV1.TagTemplate {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -552,12 +552,12 @@ extension Clients {
       }
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.TagTemplate.self, from: data)
+        GoogleCloudDataCatalogV1.TagTemplate.self, from: data)
     }
 
     public func getTagTemplate(
       request: GetTagTemplateRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.TagTemplate {
+    ) async throws -> GoogleCloudDataCatalogV1.TagTemplate {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -572,12 +572,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.TagTemplate.self, from: data)
+        GoogleCloudDataCatalogV1.TagTemplate.self, from: data)
     }
 
     public func updateTagTemplate(
       request: UpdateTagTemplateRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.TagTemplate {
+    ) async throws -> GoogleCloudDataCatalogV1.TagTemplate {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.tagTemplate.map({ $0.name }), !pathVariable0.isEmpty
         else {
@@ -600,7 +600,7 @@ extension Clients {
       }
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.TagTemplate.self, from: data)
+        GoogleCloudDataCatalogV1.TagTemplate.self, from: data)
     }
 
     public func deleteTagTemplate(
@@ -625,7 +625,7 @@ extension Clients {
 
     public func createTagTemplateField(
       request: CreateTagTemplateFieldRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.TagTemplateField {
+    ) async throws -> GoogleCloudDataCatalogV1.TagTemplateField {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -647,12 +647,12 @@ extension Clients {
       }
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.TagTemplateField.self, from: data)
+        GoogleCloudDataCatalogV1.TagTemplateField.self, from: data)
     }
 
     public func updateTagTemplateField(
       request: UpdateTagTemplateFieldRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.TagTemplateField {
+    ) async throws -> GoogleCloudDataCatalogV1.TagTemplateField {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -673,12 +673,12 @@ extension Clients {
       }
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.TagTemplateField.self, from: data)
+        GoogleCloudDataCatalogV1.TagTemplateField.self, from: data)
     }
 
     public func renameTagTemplateField(
       request: RenameTagTemplateFieldRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.TagTemplateField {
+    ) async throws -> GoogleCloudDataCatalogV1.TagTemplateField {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -695,12 +695,12 @@ extension Clients {
       req.httpBody = try JSONEncoder().encode(request)
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.TagTemplateField.self, from: data)
+        GoogleCloudDataCatalogV1.TagTemplateField.self, from: data)
     }
 
     public func renameTagTemplateFieldEnumValue(
       request: RenameTagTemplateFieldEnumValueRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.TagTemplateField {
+    ) async throws -> GoogleCloudDataCatalogV1.TagTemplateField {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -717,7 +717,7 @@ extension Clients {
       req.httpBody = try JSONEncoder().encode(request)
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.TagTemplateField.self, from: data)
+        GoogleCloudDataCatalogV1.TagTemplateField.self, from: data)
     }
 
     public func deleteTagTemplateField(
@@ -742,7 +742,7 @@ extension Clients {
 
     public func createTag(
       request: CreateTagRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Tag {
+    ) async throws -> GoogleCloudDataCatalogV1.Tag {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -761,12 +761,12 @@ extension Clients {
       }
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.Tag.self, from: data)
+        GoogleCloudDataCatalogV1.Tag.self, from: data)
     }
 
     public func updateTag(
       request: UpdateTagRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.Tag {
+    ) async throws -> GoogleCloudDataCatalogV1.Tag {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.tag.map({ $0.name }), !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.tag.name' is not set or is empty")
@@ -787,7 +787,7 @@ extension Clients {
       }
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.Tag.self, from: data)
+        GoogleCloudDataCatalogV1.Tag.self, from: data)
     }
 
     public func deleteTag(
@@ -810,7 +810,7 @@ extension Clients {
 
     public func listTags(
       request: ListTagsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.ListTagsResponse {
+    ) async throws -> GoogleCloudDataCatalogV1.ListTagsResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -828,7 +828,7 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.ListTagsResponse.self, from: data)
+        GoogleCloudDataCatalogV1.ListTagsResponse.self, from: data)
     }
 
     public func reconcileTags(
@@ -855,7 +855,7 @@ extension Clients {
 
     public func starEntry(
       request: StarEntryRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.StarEntryResponse {
+    ) async throws -> GoogleCloudDataCatalogV1.StarEntryResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -872,12 +872,12 @@ extension Clients {
       req.httpBody = try JSONEncoder().encode(request)
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.StarEntryResponse.self, from: data)
+        GoogleCloudDataCatalogV1.StarEntryResponse.self, from: data)
     }
 
     public func unstarEntry(
       request: UnstarEntryRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.UnstarEntryResponse {
+    ) async throws -> GoogleCloudDataCatalogV1.UnstarEntryResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -894,7 +894,7 @@ extension Clients {
       req.httpBody = try JSONEncoder().encode(request)
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.UnstarEntryResponse.self, from: data)
+        GoogleCloudDataCatalogV1.UnstarEntryResponse.self, from: data)
     }
 
     public func setIamPolicy(
@@ -987,7 +987,7 @@ extension Clients {
 
     public func setConfig(
       request: SetConfigRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.MigrationConfig {
+    ) async throws -> GoogleCloudDataCatalogV1.MigrationConfig {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -1004,12 +1004,12 @@ extension Clients {
       req.httpBody = try JSONEncoder().encode(request)
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.MigrationConfig.self, from: data)
+        GoogleCloudDataCatalogV1.MigrationConfig.self, from: data)
     }
 
     public func retrieveConfig(
       request: RetrieveConfigRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.OrganizationConfig {
+    ) async throws -> GoogleCloudDataCatalogV1.OrganizationConfig {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -1024,12 +1024,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.OrganizationConfig.self, from: data)
+        GoogleCloudDataCatalogV1.OrganizationConfig.self, from: data)
     }
 
     public func retrieveEffectiveConfig(
       request: RetrieveEffectiveConfigRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudDatacatalogV1.MigrationConfig {
+    ) async throws -> GoogleCloudDataCatalogV1.MigrationConfig {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -1044,7 +1044,7 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudDatacatalogV1.MigrationConfig.self, from: data)
+        GoogleCloudDataCatalogV1.MigrationConfig.self, from: data)
     }
 
     public func listOperations(
